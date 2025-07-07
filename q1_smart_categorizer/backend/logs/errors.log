@@ -1,0 +1,138 @@
+2025-07-07 16:10:36,579 - api - ERROR - logging_config.py:81 - Error: [TypeError("'numpy.int64' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')] - Context: Request middleware
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 324, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'numpy.int64' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 329, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\backend\api\routes.py", line 75, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\routing.py", line 201, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 289, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+        value,
+    ...<4 lines>...
+        sqlalchemy_safe=sqlalchemy_safe,
+    )
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 289, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+        value,
+    ...<4 lines>...
+        sqlalchemy_safe=sqlalchemy_safe,
+    )
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 332, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'numpy.int64' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-07-07 16:10:36,579 - api - ERROR - logging_config.py:81 - Error: [TypeError("'numpy.int64' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')] - Context: Request middleware
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 324, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'numpy.int64' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 329, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\backend\api\routes.py", line 75, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\base.py", line 156, in call_next
+    raise app_exc
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\base.py", line 141, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\routing.py", line 327, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\routing.py", line 201, in serialize_response
+    return jsonable_encoder(response_content)
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 289, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+        value,
+    ...<4 lines>...
+        sqlalchemy_safe=sqlalchemy_safe,
+    )
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 289, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+        value,
+    ...<4 lines>...
+        sqlalchemy_safe=sqlalchemy_safe,
+    )
+  File "C:\Users\Lenovo\Desktop\PY-project\W4D5_q1\virtual\Lib\site-packages\fastapi\encoders.py", line 332, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'numpy.int64' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]

@@ -1,0 +1,36 @@
+# FastAPI and web framework
+fastapi[standard]
+uvicorn
+pydantic
+
+# Machine Learning - Using compatible versions for Windows/Python 3.13
+scikit-learn
+numpy
+pandas
+
+# Deep Learning and Transformers
+torch
+transformers
+sentence-transformers
+
+# Google Gemini API
+google-generativeai
+
+# Visualization and Dimensionality Reduction
+umap-learn
+plotly
+
+# Streamlit
+streamlit
+
+# Utilities
+requests
+joblib
+
+# Additional dependencies for Windows compatibility
+wheel
+setuptools
+
+# Optional: For better performance
+# accelerate==0.24.1  # For faster transformers
+# datasets==2.14.6    # If you need additional datasets 
