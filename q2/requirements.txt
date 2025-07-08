@@ -1,0 +1,34 @@
+# FastAPI Backend
+fastapi[standard]
+uvicorn
+python-multipart
+pydantic
+
+# Streamlit Frontend
+streamlit
+
+# Document Processing
+PyMuPDF
+python-docx
+pypdf
+
+# Vector Database
+chromadb
+
+# LangChain & LLM
+langchain
+langchain-google-genai
+langchain-community
+google-generativeai
+
+# Text Processing & NLP
+spacy
+nltk
+sentence-transformers
+
+# Utilities
+python-dotenv
+pandas
+numpy
+scikit-learn
+plotly-express

@@ -1,0 +1,1 @@
+# Frontend package for Indian Legal Document Search System 
